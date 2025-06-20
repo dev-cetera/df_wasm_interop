@@ -7,7 +7,7 @@ late final RustApi rustApi;
 
 Future<RustApi> _initializeWasm() async {
   final module = await WasmModule.initialize(
-    jsPath: 'assets/rust_lib/pkg/rust_lib.js',
+    jsPath: 'assets/rust_lib/ready/rust_lib.js',
   );
   return module.instance as RustApi;
 }
