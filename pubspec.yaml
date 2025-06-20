@@ -1,0 +1,48 @@
+##.title
+## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+##
+## Dart/Flutter (DF) Packages by dev-cetera.com & contributors. The use of this
+## source code is governed by an MIT-style license described in the LICENSE
+## file located in this project's root directory.
+##
+## See: https://opensource.org/license/mit
+##
+## ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+##.title~
+
+name: df_wasm_interop
+repository: https://github.com/robmllze/df_wasm_interop
+funding:
+  - https://www.buymeacoffee.com/dev_cetera
+description: A starting point for Dart or Flutter packages.
+version: 0.1.1
+topics:
+  - add
+  - your
+  - package
+  - topics
+  - here
+  
+## -----------------------------------------------------------------------------
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+## -----------------------------------------------------------------------------
+
+dependencies:
+  meta:
+
+## -----------------------------------------------------------------------------
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.26.2
+  # flutter_test:
+  #   sdk: flutter
+
+## -----------------------------------------------------------------------------
+
+flutter:
+  assets:
+    - web/
