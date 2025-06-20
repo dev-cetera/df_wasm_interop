@@ -27,12 +27,10 @@ class WasmModule {
   /// is not found.
   static Future<WasmModule> initialize({required String jsPath}) async {
     if (!isLoaderScriptPresent()) {
-      throw StateError(
-        '''
+      throw StateError('''
         WASM loader script not found. Please add the following script tag to your web/index.html file:
         <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/web/loader.js"></script> <!-- Replace with your actual repo/version -->
-        ''',
-      );
+        ''');
     }
 
     try {
@@ -53,7 +51,9 @@ class WasmModule {
       return WasmModule._(instance: moduleInstance);
     } catch (e) {
       // Propagate errors from JS.
-      throw Exception('Failed to initialize WASM module from $jsPath: ${e.toString()}');
+      throw Exception(
+        'Failed to initialize WASM module from $jsPath: ${e.toString()}',
+      );
     }
   }
 

@@ -6,7 +6,9 @@ import 'rust_api.dart';
 late final RustApi rustApi;
 
 Future<RustApi> _initializeWasm() async {
-  final module = await WasmModule.initialize(jsPath: 'assets/rust_lib/pkg/rust_lib.js');
+  final module = await WasmModule.initialize(
+    jsPath: 'assets/rust_lib/pkg/rust_lib.js',
+  );
   return module.instance as RustApi;
 }
 
@@ -64,7 +66,10 @@ class MyHomePage extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
-              Text('${rustApi.add(15, 27)}', style: Theme.of(context).textTheme.headlineMedium),
+              Text(
+                '${rustApi.add(15, 27)}',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
             ],
           ),
         ),
