@@ -6357,7 +6357,7 @@ B2:function B2(a){this.a=a},
 a_D(){var s=0,r=A.R(t.zk),q
 var $async$a_D=A.S(function(a,b){if(a===1)return A.O(b,r)
 while(true)switch(s){case 0:s=3
-return A.X(A.Vx("assets/rust_lib/pkg/rust_lib.js"),$async$a_D)
+return A.X(A.Vx("assets/assets/rust_lib/pkg/rust_lib.js"),$async$a_D)
 case 3:q=b.a
 s=1
 break
