@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // The initialization logic.
   Future<RustApi> _initializeWasm() async {
     // Initialize the module using the .path to the JS glue file.
-    final module = await WasmModule.initialize(jsPath: './assets/rust_lib/pkg/rust_lib.js');
+    final module = await WasmModule.initialize(jsPath: 'assets/rust_lib/pkg/rust_lib.js');
     // Cast the module's instance to our type-safe wrapper.
     return module.instance as RustApi;
   }
@@ -68,13 +68,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // If there was an error, show it.
             if (snapshot.hasError) {
+              print(snapshot.error);
               return Text('Error: ${snapshot.error}');
             }
 
             // If we have data (the API is ready), build the UI.
             if (snapshot.hasData) {
               final api = snapshot.data!;
-              final isIt42 = api.is_answer_forty_two();
+              final isIt42 = api.is_answer_forty_two(43);
               final sum = api.add(15, 27);
 
               return Padding(

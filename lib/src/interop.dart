@@ -48,7 +48,7 @@ class WasmModule {
       throw StateError(
         '''
         Wasm loader script not found. Please add the following script tag to your web/index.html file:
-        <script src="https://cdn.jsdelivr.net/gh/your-username/flutter_wasm_interop@v1.0.0/web/loader.js"></script> <!-- Replace with your actual repo/version -->
+        <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/loader/loader.js"></script> <!-- Replace with your actual repo/version -->
         ''',
       );
     }

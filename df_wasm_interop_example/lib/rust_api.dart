@@ -10,7 +10,7 @@ class RustApi {}
 // Extension methods that match the function signatures in your Rust code.
 extension RustApiExtension on RustApi {
   // Corresponds to: `pub fn greet(name: &str) -> String`
-  external bool is_answer_forty_two();
+  external bool is_answer_forty_two(int x);
 
   // Corresponds to: `pub fn add(a: i32, b: i32) -> i32`
   external int add(int a, int b);

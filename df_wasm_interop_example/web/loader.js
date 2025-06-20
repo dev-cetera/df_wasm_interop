@@ -1,7 +1,7 @@
 // web/loader.js
 
 /**
- * flutter_wasm_interop v1.0.0
+ * df_wasm_interop v0.1.0
  *
  * A generic loader for wasm-bindgen modules that can be called from Dart.
  * This script is intended to be included in your index.html.
