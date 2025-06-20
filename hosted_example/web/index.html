@@ -32,7 +32,35 @@
   <title>hosted_example</title>
   <link rel="manifest" href="manifest.json">
 
-  <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/web/loader.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/web/loader.js"></script> -->
+  <script type="module">
+    window.flutter_wasm_interop = {
+      _modules: new Map(),
+      _initPromises: new Map(),
+
+      loadModule(jsPath) {
+        if (!this._initPromises.has(jsPath)) {
+          this._initPromises.set(jsPath, (async () => {
+            try {
+              const module = await import(jsPath);
+              const wasmPath = jsPath.replace(/\.js$/, '_bg.wasm');
+              await module.default(wasmPath);
+              this._modules.set(jsPath, module);
+              console.log(`Successfully loaded WASM module from: ${jsPath}`);
+            } catch (e) {
+              console.error(`Failed to load WASM module from ${jsPath}:`, e);
+              throw e;
+            }
+          })());
+        }
+        return this._initPromises.get(jsPath);
+      },
+
+      getModule(jsPath) {
+        return this._modules.get(jsPath);
+      }
+    };
+  </script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
