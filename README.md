@@ -76,9 +76,17 @@ wasm-pack build --target web
 
 ### Step 2: Add Assets to Your Flutter Project
 
-Copy the generated pkg directory into your Flutter project's `web/assets/` folder.
+Define the assets path in your `pubspec.yaml`:
 
-Your final file structure should look like this:
+```yaml
+flutter:
+  assets:
+    - my_module/
+```
+
+You can also manually copy the generated pkg directory into your Flutter project's `web/assets/` folder. This is sometimes an easier solution if Firebase Hosting or GitHub pages give you trouble.
+
+Your final file structure after build should look like this:
 
 ```
 flutter_project/
@@ -89,14 +97,6 @@ flutter_project/
     │       └── my_module_bg.wasm
     ├── index.html
     └── loader.js <------ OPTIONAL
-```
-
-Or in Flutter, define the assets path in your `pubspec.yaml`:
-
-```yaml
-flutter:
-  assets:
-    - my_module/
 ```
 
 ### Step 3: Setup `index.html`
