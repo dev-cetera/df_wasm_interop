@@ -2,6 +2,8 @@
 
 A modern utility to load and use wasm-bindgen modules in Flutter web apps, with support for the WasmGC (--wasm) compiler.
 
+See this [Live Example](https://dev-cetera.github.io/df_wasm_interop/). It runs some Rust functions and was compiled with the `--wasm` flag. Here is the[ Source Code](https://github.com/dev-cetera/df_wasm_interop/tree/main/hosted_example).
+
 ## Features
 
 - **WasmGC Compatible:** Built from the ground up for `flutter build web --wasm`.
@@ -97,13 +99,13 @@ Add the following `<script>` tag to your `web/index.html` file:
 ```html
 <head>
   <!-- ... -->
-  <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/web/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dev-cetera/df_wasm_interop@v0.1.1/web/loader.js"></script>
 </head>
 ```
 
 ### Option B
 
-1. Create a new file in your Flutter project at `web/loader.js` and paste the contents of the loader script into it. You can find the official loader script here: [loader.js on GitHub](https://github.com/robmllze/df_wasm_interop/blob/v0.1.0/web/loader.js)
+1. Create a new file in your Flutter project at `web/loader.js` and paste the contents of the loader script into it. You can find the official loader script here: [loader.js on GitHub](https://github.com/ev-cetera/df_wasm_interop/blob/v0.1.1/web/loader.js)
 
 2. Add the following `<script>` tag to your `web/index.html` file:
 
