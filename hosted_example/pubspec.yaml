@@ -19,4 +19,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/rust_lib/pkg/
+    - rust_lib/pkg/
