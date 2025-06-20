@@ -1,0 +1,1 @@
+/Users/robmllze/Desktop/df_wasm_interop/df_wasm_interop_example/web/assets/rust_lib/target/wasm32-unknown-unknown/release/rust_lib.wasm: /Users/robmllze/Desktop/df_wasm_interop/df_wasm_interop_example/web/assets/rust_lib/src/lib.rs

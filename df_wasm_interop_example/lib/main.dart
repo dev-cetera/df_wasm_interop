@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:df_wasm_interop/df_wasm_interop.dart';
-import 'dart:js_interop'; // For .toJS and .toDart conversions
 
 import 'rust_api.dart'; // Our custom wrapper
 
@@ -44,8 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // The initialization logic.
   Future<RustApi> _initializeWasm() async {
-    // Initialize the module using the path to the JS glue file.
-    final module = await WasmModule.initialize(jsPath: 'assets/rust_lib/rust_lib.js');
+    // Initialize the module using the .path to the JS glue file.
+    final module = await WasmModule.initialize(jsPath: './assets/rust_lib/pkg/rust_lib.js');
     // Cast the module's instance to our type-safe wrapper.
     return module.instance as RustApi;
   }
@@ -75,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // If we have data (the API is ready), build the UI.
             if (snapshot.hasData) {
               final api = snapshot.data!;
-              final greeting = api.greet('Flutter'.toJS).toDart;
+              final isIt42 = api.is_answer_forty_two();
               final sum = api.add(15, 27);
 
               return Padding(
@@ -88,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 8),
-                    Text(greeting, style: Theme.of(context).textTheme.headlineMedium),
+                    Text(isIt42 ? 'Yes' : 'No', style: Theme.of(context).textTheme.headlineMedium),
                     const SizedBox(height: 24),
                     const Text(
                       'Result from Rust `add(15, 27)`:',
