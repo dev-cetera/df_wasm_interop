@@ -7,7 +7,7 @@ late final RustApi rustApi;
 
 Future<RustApi> _initializeWasm() async {
   final module = await WasmModule.initialize(
-    jsPath: 'assets/rust_lib/pkg/rust_lib.js',
+    jsPath: 'assets/assets/rust_lib/pkg/rust_lib.js',
   );
   return module.instance as RustApi;
 }
@@ -44,13 +44,12 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Flutter WASM Interop!'),
       ),
-
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               const Text(
                 'Result from Rust `rustApi.is_answer_forty_two(42)`:',
                 style: TextStyle(fontWeight: FontWeight.bold),
