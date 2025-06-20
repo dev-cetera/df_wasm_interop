@@ -15,6 +15,8 @@ Dart & Flutter Packages by dev-cetera.com & contributors.
 
 A modern utility to load and use wasm-bindgen modules in Flutter web apps, with support for the WasmGC (--wasm) compiler.
 
+See this [Live Example](https://dev-cetera.github.io/df_wasm_interop/). It runs some Rust functions and was compiled with the `--wasm` flag. Here is the [ Source Code](https://github.com/dev-cetera/df_wasm_interop/tree/main/hosted_example).
+
 ## Features
 
 - **WasmGC Compatible:** Built from the ground up for `flutter build web --wasm`.
