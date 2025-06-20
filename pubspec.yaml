@@ -11,27 +11,23 @@
 ##.title~
 
 name: df_wasm_interop
+homepage: https://dev-cetera.com/
 repository: https://github.com/robmllze/df_wasm_interop
 funding:
   - https://www.buymeacoffee.com/dev_cetera
-description: A starting point for Dart or Flutter packages.
-version: 0.1.1
+description: A modern utility to load and use wasm-bindgen modules in Flutter web apps, with support for the WasmGC (--wasm) compiler.
+version: 0.1.0
 topics:
-  - add
-  - your
-  - package
-  - topics
-  - here
+  - wasm
+  - interop
+  - rust
+  - utility
+  - wasm-bindgen
   
 ## -----------------------------------------------------------------------------
 
 environment:
   sdk: ">=3.5.0 <4.0.0"
-
-## -----------------------------------------------------------------------------
-
-dependencies:
-  meta:
 
 ## -----------------------------------------------------------------------------
 

@@ -1,38 +1,20 @@
-// lib/src/interop.dart
-
 import 'dart:js_interop';
 
-/// Represents an initialized Wasm module, providing access to its exported functions.
+/// Represents an initialized WASM module, providing access to its exported functions.
 ///
 /// This class is a Dart-side container for a JavaScript module object. You should
 /// cast the [instance] to your own `@staticInterop` type for type-safe access
-/// to your Wasm functions.
+/// to your WASM functions.
 //
 // REMOVED: @JS() and @anonymous annotations. This is now a regular Dart class.
 class WasmModule {
   /// The raw JavaScript module object containing all exported functions
-  /// from your Wasm module.
+  /// from your WASM module.
   ///
   /// Cast this object to your custom, type-safe interop class.
-  ///
-  /// Example:
-  /// ```dart
-  /// @JS()
-  /// @staticInterop
-  /// class MyRustApi {}
-  ///
-  /// extension MyRustApiExtension on MyRustApi {
-  ///   external JSString hello_world();
-  /// }
-  ///
-  /// final module = await WasmModule.initialize(...);
-  /// final myApi = module.instance as MyRustApi;
-  /// print(myApi.hello_world().toDart);
-  /// ```
-  // REMOVED: `external` keyword. This is now a regular Dart field.
   final JSObject instance;
 
-  /// Initializes a Wasm module using the `wasm-bindgen` generated JavaScript
+  /// Initializes a WASM module using the `wasm-bindgen` generated JavaScript
   /// glue file. This is the primary entry point for using the package.
   ///
   /// This function assumes a loader script (`loader.js` from this package)
@@ -47,8 +29,8 @@ class WasmModule {
     if (!isLoaderScriptPresent()) {
       throw StateError(
         '''
-        Wasm loader script not found. Please add the following script tag to your web/index.html file:
-        <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/loader/loader.js"></script> <!-- Replace with your actual repo/version -->
+        WASM loader script not found. Please add the following script tag to your web/index.html file:
+        <script src="https://cdn.jsdelivr.net/gh/robmllze/df_wasm_interop@v0.1.0/web/loader.js"></script> <!-- Replace with your actual repo/version -->
         ''',
       );
     }
@@ -62,23 +44,22 @@ class WasmModule {
 
       if (moduleInstance == null) {
         throw Exception(
-            'Failed to get Wasm module instance for: $jsPath. The module might have failed to initialize.');
+          'Failed to get WASM module instance for: $jsPath. The module might have failed to initialize.',
+        );
       }
 
-      // The `moduleInstance` is the JSObject we need.
-      // We can create a Dart object that holds it.
+      // The `moduleInstance` is the JSObject we need.  We can create a Dart
+      //object that holds it.
       return WasmModule._(instance: moduleInstance);
     } catch (e) {
       // Propagate errors from JS.
-      throw Exception('Failed to initialize Wasm module from $jsPath: ${e.toString()}');
+      throw Exception('Failed to initialize WASM module from $jsPath: ${e.toString()}');
     }
   }
 
   // Private constructor is now valid because `instance` is a regular field.
   const WasmModule._({required this.instance});
 }
-
-// Private JS interop bindings to the functions in `loader.js`. These are unchanged.
 
 @JS('window.flutter_wasm_interop.loadModule')
 external JSPromise<JSAny?> _loadModule(JSString jsPath);
