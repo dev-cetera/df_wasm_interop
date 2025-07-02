@@ -14,7 +14,9 @@ name: df_wasm_interop
 homepage: https://dev-cetera.com/
 repository: https://github.com/robmllze/df_wasm_interop
 funding:
-  - https://www.buymeacoffee.com/dev_cetera
+- https://www.buymeacoffee.com/dev_cetera
+- https://www.patreon.com/c/RobertMollentze
+- https://github.com/sponsors/robmllze
 description: A modern utility to load and use wasm-bindgen modules in Flutter web apps, with support for the WasmGC (--wasm) compiler.
 version: 0.1.2
 topics:
