@@ -1,17 +1,13 @@
-<a href="https://www.buymeacoffee.com/dev_cetera" target="_blank"><img align="right" src="https://cdn.buymeacoffee.com/buttons/default-orange.png" height="48"></a>
-<a href="https://discord.gg/gEQ8y2nfyX" target="_blank"><img align="right" src="https://raw.githubusercontent.com/dev-cetera/.github/refs/heads/main/assets/icons/discord_icon/discord_icon.svg" height="48"></a>
-
-Dart & Flutter Packages by dev-cetera.com & contributors.
-
-[![sponsor](https://img.shields.io/badge/sponsor-grey?logo=github-sponsors)](https://github.com/sponsors/dev-cetera)
-[![patreon](https://img.shields.io/badge/patreon-grey?logo=patreon)](https://www.patreon.com/c/RobertMollentze)
 [![pub](https://img.shields.io/pub/v/df_wasm_interop.svg)](https://pub.dev/packages/df_wasm_interop)
-[![tag](https://img.shields.io/badge/tag-v0.1.2-purple?logo=github)](https://github.com/dev-cetera/df_wasm_interop/tree/v0.1.2)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dev-cetera/df_wasm_interop/main/LICENSE)
+[![tag](https://img.shields.io/badge/Tag-v0.2.0-purple?logo=github)](https://github.com/dev-cetera/df_wasm_interop/tree/v0.2.0)
+[![buymeacoffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/dev_cetera)
+[![sponsor](https://img.shields.io/badge/Sponsor-grey?logo=github-sponsors&logoColor=pink)](https://github.com/sponsors/dev-cetera)
+[![patreon](https://img.shields.io/badge/Patreon-grey?logo=patreon)](https://www.patreon.com/robelator)
+[![discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)](https://discord.gg/gEQ8y2nfyX)
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/dev_cetera/)
+[![license](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/dev-cetera/df_wasm_interop/main/LICENSE)
 
 ---
-
-[![banner](https://github.com/dev-cetera/df_safer_dart/blob/v0.1.2/doc/assets/banner.png?raw=true)](https://github.com/dev-cetera)
 
 <!-- BEGIN _README_CONTENT -->
 
@@ -175,12 +171,11 @@ void main() async {
 }
 ```
 
-
 <!-- END _README_CONTENT -->
 
 ---
 
-☝️ Please refer to the [API reference](https://pub.dev/documentation/df_wasm_interop/) for more information.
+🔍 For more information, refer to the [API reference](https://pub.dev/documentation/df_wasm_interop/).
 
 ---
 
@@ -190,7 +185,6 @@ This is an open-source project, and we warmly welcome contributions from everyon
 
 ### ☝️ Ways you can contribute
 
-- **Buy me a coffee:** If you'd like to support the project financially, consider [buying me a coffee](https://www.buymeacoffee.com/dev_cetera). Your support helps cover the costs of development and keeps the project growing.
 - **Find us on Discord:** Feel free to ask questions and engage with the community here: https://discord.gg/gEQ8y2nfyX.
 - **Share your ideas:** Every perspective matters, and your ideas can spark innovation.
 - **Help others:** Engage with other users by offering advice, solutions, or troubleshooting assistance.
@@ -207,7 +201,6 @@ If you're enjoying this package and find it valuable, consider showing your appr
 
 <a href="https://www.buymeacoffee.com/dev_cetera" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" height="40"></a>
 
-## 🧑‍⚖️ License
+## LICENSE
 
 This project is released under the [MIT License](https://raw.githubusercontent.com/dev-cetera/df_wasm_interop/main/LICENSE). See [LICENSE](https://raw.githubusercontent.com/dev-cetera/df_wasm_interop/main/LICENSE) for more information.
-

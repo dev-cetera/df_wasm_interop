@@ -1,0 +1,11 @@
+name: df_wasm_interop_example
+homepage: https://dev-cetera.com/
+publish_to: none
+version: 0.1.0
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+dependencies:
+  df_wasm_interop:
+    path: ..
+dev_dependencies:
+  lints: ^6.0.0

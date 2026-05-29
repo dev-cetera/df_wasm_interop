@@ -1,10 +1,14 @@
 name: df_wasm_interop_hosted_example
 homepage: https://dev-cetera.com/
-repository: https://github.com/robmllze/df_wasm_interop
 funding:
 - https://www.buymeacoffee.com/dev_cetera
-- https://www.patreon.com/c/RobertMollentze
-- https://github.com/sponsors/robmllze
+- https://www.patreon.com/c/robelator
+- https://github.com/sponsors/robelator
+- https://www.patreon.com/c/robelator
+- https://github.com/sponsors/robelator
+- https://www.buymeacoffee.com/dev_cetera
+
+
 publish_to: none
 version: 0.1.0
 environment:
